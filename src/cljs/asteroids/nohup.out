@@ -1,0 +1,4 @@
+NVIDIA: could not open the device file /dev/nvidia0 (Operation not permitted).
+NVIDIA: could not open the device file /dev/nvidia0 (Operation not permitted).
+[148:162:1117/214131:ERROR:platform_thread_linux.cc(99)] Failed to set nice value of thread to -10
+[148:168:1117/214149:ERROR:platform_thread_linux.cc(99)] Failed to set nice value of thread to -10

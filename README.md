@@ -1,8 +1,22 @@
 Asteroids
 =========
 
+
 Dependencies
 ------------
+  - [npm](npmjs.org)
+  - [lein](leiningen.org)
+  - [clojurescript
+Browserify and Beefy
+```
+npm install browserify beefy -g
+```
+
+How to Build
+------------
+lein cljsb
+
+
 
 
 File Structure
@@ -18,6 +32,3 @@ File Structure
             component.cljs -- Holds the components(Everything is made up of components)
             newgame.cljs -- Creates the initial game state.
             render.cljs -- Render the game state to the screen.
-
-      
-
