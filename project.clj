@@ -13,10 +13,10 @@
 
   :source-paths ["src"]
 
-  :cljsbuild {:builds [{:id "asteroids"
+  :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
                         :compiler {
-                                   :output-to "asteroids.js"
+                                   :output-to "target/cljs/asteroids.js"
                                    :output-dir "out"
                                    :optimizations :none
                                    :source-map true}}
@@ -25,10 +25,6 @@
                         :source-paths ["src/cljs" "test/cljs"]
                         :compiler {
                                    :output-to "target/cljs/testable.js"
+                                   :output-dir "test-out"
                                    :optimizations :none
-                                   :pretty-print true
-                                   :source-map true}}]
-              :test-commands {"unit-tests" ["phantomjs" :runner
-                                            "window.literal_js_was_evalutaed=true"
-                                            "target/cljs/testable.js" ] } })
-
+                                   :source-map true}}]})

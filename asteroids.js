@@ -1,7 +1,10 @@
 goog.addDependency("base.js", ['goog'], []);
 goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.array', 'goog.object', 'goog.string.StringBuffer']);
-goog.addDependency("../clojure/string.js", ['clojure.string'], ['cljs.core', 'goog.string', 'goog.string.StringBuffer']);
-goog.addDependency("../asteroids/render.js", ['asteroids.render'], ['cljs.core', 'clojure.string']);
 goog.addDependency("../asteroids/components.js", ['asteroids.components'], ['cljs.core']);
-goog.addDependency("../asteroids/newgame.js", ['asteroids.newgame'], ['cljs.core', 'asteroids.components']);
-goog.addDependency("../asteroids/core.js", ['asteroids.core'], ['cljs.core', 'asteroids.render', 'asteroids.newgame']);
+goog.addDependency("../asteroids/lib/lib.js", ['asteroids.lib.lib'], ['cljs.core']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['cljs.core', 'goog.string', 'goog.string.StringBuffer']);
+goog.addDependency("../asteroids/render/player.js", ['asteroids.render.player'], ['cljs.core', 'asteroids.lib.lib', 'clojure.string']);
+goog.addDependency("../asteroids/render/background.js", ['asteroids.render.background'], ['cljs.core', 'asteroids.lib.lib']);
+goog.addDependency("../asteroids/newgame.js", ['asteroids.newgame'], ['cljs.core', 'asteroids.components', 'asteroids.render.player', 'asteroids.render.background']);
+goog.addDependency("../asteroids/renderer.js", ['asteroids.renderer'], ['cljs.core', 'asteroids.lib.lib']);
+goog.addDependency("../asteroids/core.js", ['asteroids.core'], ['cljs.core', 'asteroids.components', 'asteroids.lib.lib', 'asteroids.newgame', 'asteroids.renderer']);
